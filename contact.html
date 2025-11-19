@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Rafia Maryam Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">Rafia</div>
+      <nav>
+        <ul>
+           <li><a href="index.html" >Home</a></li>
+          <li><a href="about.html" class="active" >About</a></li>
+          <li><a href="project.html" >Projects</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" class="theme-btn">
+        <i class='bx bx-square'></i>
+      </button>
+
+    </div>
+    
+
+  </header>
+
+  <section id="contact" class="container">
+    <h2 class="section-title">Contact Me</h2>
+    <p class="section-sub">Get in touch</p>
+    <div class="contact-grid">
+       
+      <div class="contact-card">
+        <h4>Talk to me</h4>
+        <p class="subtitle"><i class='bx bx-mail-send'></i> rafia@example.com</p>
+        <p class="subtitle"><i class='bx bx-phone'></i> +92 300 0000000</p>
+        <p class="subtitle"><i class='bx bx-map'></i> Lahore, Pakistan</p>
+      </div>
+
+      <div class="contact-card">
+        <form id="contact">
+          <div class="grid" style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+            <div>
+              <input type="text" id="name" placeholder="Your Name">
+              <p class="error" id="nameError"></p>
+            </div>
+            <div>
+              <input type="email" id="email" placeholder="Your Email" value="Your Email">
+              <p class="error" id="emailError"></p>
+            </div>
+          </div>
+          <div>
+            <input type="text" id="subject" placeholder="Subject">
+            <p class="error" id="subjectError"></p>
+          </div>
+          <div>
+            <textarea id="message" placeholder="Message"></textarea>
+            <p class="error" id="messageError"></p>
+          </div>
+          <button class="btn" type="submit"><i class='bx bx-send'></i> Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container foot">
+      <div><strong>Rafia</strong> — Frontend Developer</div>
+      <div class="chip">© <span id="y"></span> All rights reserved</div>
+    </div>
+  </footer>
+ <script>
+  const btn = document.querySelector(".theme-btn");
+  const body = document.body;
+
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-theme");
+  }
+
+  btn.addEventListener("click", () => {
+    body.classList.toggle("dark-theme");
+    if (body.classList.contains("dark-theme")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  });
+
+  
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact");
+
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const subjectInput = document.getElementById("subject");
+  const messageInput = document.getElementById("message");
+
+  const nameError = document.getElementById("nameError");
+  const emailError = document.getElementById("emailError");
+  const subjectError = document.getElementById("subjectError");
+  const messageError = document.getElementById("messageError");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let isValid = true;
+    if (!nameInput.value.trim()) {
+      nameError.textContent = "Name is required";
+      nameError.style.display = "block";
+      nameInput.classList.add("invalid");
+      isValid = false;
+    } else {
+      nameError.style.display = "none";
+      nameInput.classList.remove("invalid");
+    }
+    if (!emailInput.value.trim()) {
+      emailError.textContent = "Email is required";
+      emailError.style.display = "block";
+      emailInput.classList.add("invalid");
+      isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(emailInput.value)) {
+      emailError.textContent = "Enter a valid email";
+      emailError.style.display = "block";
+      emailInput.classList.add("invalid");
+      isValid = false;
+    } else {
+      emailError.style.display = "none";
+      emailInput.classList.remove("invalid");
+    }
+
+    if (!subjectInput.value.trim()) {
+      subjectError.textContent = "Subject is required";
+      subjectError.style.display = "block";
+      subjectInput.classList.add("invalid");
+      isValid = false;
+    } else {
+      subjectError.style.display = "none";
+      subjectInput.classList.remove("invalid");
+    }
+    if (!messageInput.value.trim()) {
+      messageError.textContent = "Message is required";
+      messageError.style.display = "block";
+      messageInput.classList.add("invalid");
+      isValid = false;
+    } else {
+      messageError.style.display = "none";
+      messageInput.classList.remove("invalid");
+    }
+
+    if (isValid) {
+      alert("Thanks! Your message has been sent.");
+      form.reset();
+    }
+  });
+});
+
+
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>

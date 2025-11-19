@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Projects - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <header>
+    <div class="container nav">
+      <div class="brand">Rafia</div>
+      <nav>
+        <ul>
+         <li><a href="index.html" >Home</a></li>
+          <li><a href="about.html" >About</a></li>
+          <li><a href="project.html" class="active">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+       <button id="theme-toggle" class="theme-btn">
+        <i class='bx bx-square'></i>
+      </button>
+
+    </div>
+  </header>
+
+ 
+  <section class="head">
+    <h1>My Web Development Projects</h1>
+    <p>Here are some projects I built with HTML, CSS, JavaScript and more...</p>
+ 
+    <button class="btn" id="openModal"><i class='bx bx-box'></i> Contact Me</button>
+  </section>
+
+
+  <section class="projects">
+   
+    <div class="project-card">
+      <img src="sources/img11.avif" alt="Portfolio Website">
+      <div class="project-content">
+        <h3>Portfolio Website</h3>
+        <p>A responsive personal portfolio with animations, GIFs and a theme switcher.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+    </div>
+   
+    <div class="project-card">
+      <img src="sources/img13.jpg" alt="E-commerce">
+      <div class="project-content">
+        <h3>E-commerce Store</h3>
+        <p>A modern web shop with product pages, cart, and payment integration.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+    </div>
+    
+    <div class="project-card">
+      <img src="https://media.giphy.com/media/QTfX9Ejfra3ZmNxh6B/giphy.gif" alt="JavaScript Animation">
+      <div class="project-content">
+        <h3>JS Animations</h3>
+        <p>Interactive animations and transitions using JavaScript and CSS.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+    </div>
+   
+    <div class="project-card">
+      <video controls>
+        <source src="https://youtu.be/E9LhNtKb9YM" type="video/mp4">
+       
+      </video>
+      <div class="project-content">
+        <h3>Web App Demo</h3>
+        <p>A live demo of my web application showing features and workflow.</p>
+        <a href="#" class="btn">View Demo</a>
+      </div>
+    </div>
+   
+    <div class="project-card">
+      <img src="sources/img14.avif" alt="Blog Website">
+      <div class="project-content">
+        <h3>Blog Website</h3>
+        <p>A blogging platform with categories, post editor, and comment system.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+    </div>
+   
+    
+    <div class="project-card">
+      <img src="sources/img15.avif" alt="Dashboard Project">
+      <div class="project-content">
+        <h3>Analytics Dashboard</h3>
+        <p>A responsive dashboard with charts, tables, and user management system.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container foot">
+      <div><strong>Rafia</strong> — Frontend Developer</div>
+      <div class="chip">© <span id="y"></span> All rights reserved</div>
+    </div>
+  </footer>
+
+
+  <div class="modal" id="contactModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name">
+        <span class="error" id="nameError">Name is required</span>
+
+        <input type="email" id="email" placeholder="Your Email">
+        <span class="error" id="emailError">Enter a valid email</span>
+
+        <input type="text" id="subject" placeholder="Subject">
+        <span class="error" id="subError">Subject cannot be empty</span>
+
+        <textarea id="message" placeholder="Message"></textarea>
+        <span class="error" id="msgError">Message cannot be empty</span>
+
+        <button type="submit" class="btn"><i class='bx bx-box'></i> Send Message</button>
+      </form>
+    </div>
+  </div>
+<script>
+  const btn = document.querySelector(".theme-btn");
+  const body = document.body;
+
+ 
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-theme");
+  }
+
+  btn.addEventListener("click", () => {
+    body.classList.toggle("dark-theme");
+
+   
+    if (body.classList.contains("dark-theme")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  });
+</script>
+
+   <script src="script.js"></script>
+
+</body>
+</html>

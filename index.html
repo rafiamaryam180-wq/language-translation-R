@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rafia Maryam — Portfolio</title>
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">Rafia</div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+       <button id="theme-toggle" class="theme-btn">
+        <i class='bx bx-square'></i>
+      </button>
+    </div>
+  </header>
+
+ 
+  <main id="home" class="hero container">
+    <div class="hero-wrap">
+      <div>
+        <div class="chip"><i class='bx bx-hand'></i> Hi, I'm</div>
+        <h1>Rafia Maryam</h1>
+        <p class="subtitle">Frontend Developer — I craft clean UIs with high-quality code and great attention to detail.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#contact"><i class='bx bxs-contact'></i> Contact me</a>
+          <a class="chip" href="#about"><i class='bx bx-chevrons-down'></i> scroll down</a>
+        </div>
+      </div>
+      <div>
+        <div class="avatar">
+          <img src="sources/img1.avif" alt="Rafia portrait" />
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <section id="about" class="container">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-sub">My introduction</p>
+    <div class="about-grid">
+      <div class="about-card">
+        <img src="sources/img2.avif" alt="Rafia working" />
+      </div>
+      <div>
+        <p>Web developer with extensive knowledge and years of experience building high-quality interfaces using modern technologies focused on design, accessibility, and performance.</p>
+        <div class="stats">
+          <div class="stat"><div class="num">08+</div><div>Years<br>experience</div></div>
+          <div class="stat"><div class="num">20+</div><div>Completed<br>projects</div></div>
+          <div class="stat"><div class="num">5+</div><div>Companies<br>worked</div></div>
+        </div>
+        <a class="btn" href="#" download><i class='bx bx-download'></i> Download CV</a>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="skills" class="container fade-up">
+    <h2 class="section-title">Skills</h2>
+    <p class="section-sub">My technical level</p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h4><i class='bx bx-code-alt'></i> Frontend Developer</h4>
+        <div class="skill-row"><small>HTML</small><small>90%</small></div>
+        <div class="bar" data-value="90"><span></span></div>
+        <div class="skill-row"><small>CSS</small><small>85%</small></div>
+        <div class="bar" data-value="85"><span></span></div>
+        <div class="skill-row"><small>JavaScript</small><small>80%</small></div>
+        <div class="bar" data-value="80"><span></span></div>
+        <div class="skill-row"><small>React</small><small>70%</small></div>
+        <div class="bar" data-value="70"><span></span></div>
+      </div>
+      <div class="skill-card">
+        <h4><i class='bx bxs-pencil'></i> Designer</h4>
+        <div class="skill-row"><small>UI/UX</small><small>80%</small></div>
+        <div class="bar" data-value="80"><span></span></div>
+        <div class="skill-row"><small>Figma</small><small>70%</small></div>
+        <div class="bar" data-value="70"><span></span></div>
+        <div class="skill-row"><small>Branding</small><small>60%</small></div>
+        <div class="bar" data-value="60"><span></span></div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section id="services" class="container">
+    <h2 class="section-title">Services</h2>
+    <p class="section-sub">What I offer</p>
+    <div class="cards">
+      <div class="card">
+        <div class="icon"><i class='bx bx-layout'></i></div>
+        <h4>Web Design</h4>
+        <p>Modern, responsive interfaces that look great on any device.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><i class='bx bx-code-curly'></i></div>
+        <h4>Frontend Dev</h4>
+        <p>Semantic HTML, scalable CSS, and component-based JS.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><i class='bx bx-rocket'></i></div>
+        <h4>Performance</h4>
+        <p>Optimizing load time, accessibility, and lighthouse scores.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="portfolio" class="container fade-up">
+    <h2 class="section-title">Portfolio</h2>
+    <p class="section-sub">Recent work</p>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="sources/img3.avif" alt="Project 1" />
+        <div class="p-body">
+          <strong>Website Redesign</strong>
+          <p class="subtitle">UI overhaul for SaaS dashboard</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="sources/img4.avif" alt="Project 2" />
+        <div class="p-body">
+          <strong>Landing Page</strong>
+          <p class="subtitle">High-converting marketing page</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="sources/img5.avif" alt="Project 3" />
+        <div class="p-body">
+          <strong>E-commerce UI</strong>
+          <p class="subtitle">Clean product browsing experience</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section id="video" class="container fade-up">
+    <h2 class="section-title">My Work in Action</h2>
+    <p class="section-sub">Short demo </p>
+    <div class="video-wrap">
+      <div class="video-card">
+        
+        <video controls playsinline>
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+          
+        </video>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="container">
+    <div class="cta">
+      <div>
+        <h3>Have a new project?</h3>
+        <p>Let’s collaborate to build something beautiful and fast.</p>
+      </div>
+      <div style="justify-self:end">
+        <a class="btn" href="#contact"><i class='bx bx-send'></i> Let's Talk</a>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="container fade-up">
+    <h2 class="section-title">Testimonial</h2>
+    <p class="section-sub">What clients say</p>
+
+    <div class="testi-wrap">
+      <div class="testi">
+        <div class="quote">
+          <p>“Rafia delivered pixel-perfect pages and improved our performance score significantly.”</p>
+          <div class="who">
+            <img src="sources/img6.jpeg" alt="client" />
+            <div><strong>Ali Khan</strong><div class="subtitle">Product Manager</div></div>
+          </div>
+        </div>
+        <div class="quote">
+          <p>“Rafia delivered pixel-perfect pages and improved our performance score significantly.”</p>
+          <div class="who">
+            <img src="sources/img7.jpeg" alt="client" />
+            <div><strong>dela</strong><div class="subtitle">Product Manager</div></div>
+          </div>
+        </div>
+        <div class="quote">
+          <p>“Rafia delivered pixel-perfect pages and improved our performance score significantly.”</p>
+          <div class="who">
+            <img src="sources/img8.jpeg" alt="client" />
+            <div><strong>saimon</strong><div class="subtitle">Product Manager</div></div>
+          </div>
+        </div>
+        <div class="quote">
+          <p>“Professional, communicative, and fast. The new UI boosted our conversions.”</p>
+          <div class="who">
+            <img src="sources/img9.avif" alt="client" />
+            <div><strong>Usman Tariq</strong><div class="subtitle">Founder</div></div>
+          </div>
+        </div>
+        <div class="quote">
+          <p>“Highly recommended for any frontend work—attention to detail is amazing.”</p>
+          <div class="who">
+            <img src="sources/img10.avif" alt="client" />
+            <div><strong>Sara Ahmed</strong><div class="subtitle">CTO</div></div>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="slider-nav" aria-hidden="false">
+        <button id="t-prev" aria-label="previous testimonial"><i class='bx bx-chevron-left'></i></button>
+        <button id="t-next" aria-label="next testimonial"><i class='bx bx-chevron-right'></i></button>
+      </div>
+      <div class="dots" id="t-dots" aria-hidden="false"></div>
+    </div>
+  </section>
+
+  
+  <section id="contact" class="container">
+    <h2 class="section-title">Contact Me</h2>
+    <p class="section-sub">Get in touch</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h4>Talk to me</h4>
+        <p class="subtitle"><i class='bx bx-mail-send'></i> rafia@example.com</p>
+        <p class="subtitle"><i class='bx bx-phone'></i> +92 300 0000000</p>
+        <p class="subtitle"><i class='bx bx-map'></i> Lahore, Pakistan</p>
+      </div>
+      <div class="contact-card" id="contact">
+       <form id="contactForm">
+  <div class="grid" style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+    <div>
+      <input type="text" id="name" placeholder="Your Name" required>
+      <div class="error-message">Name is required</div>
+    </div>
+    <div>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <div class="error-message">Valid email is required</div>
+    </div>
+  </div>
+  <div>
+    <input type="text" id="subject" placeholder="Subject" required>
+    <div class="error-message">Subject is required</div>
+  </div>
+  <div>
+    <textarea id="message" placeholder="Message" required></textarea>
+    <div class="error-message">Message is required</div>
+  </div>
+  <button class="btn" type="submit"><i class='bx bx-send'></i> Send Message</button>
+</form>
+
+      </div>
+    </div>
+  </section>
+
+  
+  <footer>
+    <div class="container foot">
+      <div><strong>Rafia</strong> — Frontend Developer</div>
+      <div class="chip">© <span id="y"></span> All rights reserved</div>
+    </div>
+  </footer>
+ <script>
+  const btn = document.querySelector(".theme-btn");
+  const body = document.body;
+
+ 
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-theme");
+  }
+
+  btn.addEventListener("click", () => {
+    body.classList.toggle("dark-theme");
+
+    
+    if (body.classList.contains("dark-theme")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const inputs = form.querySelectorAll("input[required], textarea[required]");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let isValid = true;
+
+    inputs.forEach(input => {
+      const errorMessage = input.nextElementSibling;
+      if (!input.value.trim()) {
+        input.classList.add("error");
+        errorMessage.style.display = "block";
+        isValid = false;
+      } else if (input.type === "email" && !/\S+@\S+\.\S+/.test(input.value)) {
+        input.classList.add("error");
+        errorMessage.textContent = "Enter a valid email";
+        errorMessage.style.display = "block";
+        isValid = false;
+      } else {
+        input.classList.remove("error");
+        errorMessage.style.display = "none";
+      }
+    });
+
+    if (isValid) {
+      alert("Thanks! Your message has been sent.");
+      form.reset();
+    }
+  });
+});
+</script>
+
+   <script src="script.js"></script>
+
+</body>
+</html>
